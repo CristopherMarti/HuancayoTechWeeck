@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: 'Valve';
+  src: url('./assets/fonts/valve.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Relidux';
+  src: url('./assets/fonts/Relidux.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Clash Display';
+  src: url('./assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Variable.woff2') format('woff2'),
+       url('./assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Variable.woff') format('woff'),
+       url('./assets/fonts/ClashDisplay_Complete/Fonts/TTF/ClashDisplay-Variable.ttf') format('truetype');
+  font-weight: 200 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --animate-gradient-x: gradient-x 6s ease infinite;
+  
+  @keyframes gradient-x {
+    0%, 100% {
+      background-size: 200% 200%;
+      background-position: left center;
+    }
+    50% {
+      background-size: 200% 200%;
+      background-position: right center;
+    }
+  }
+
+  /* Professional Dark/Light Greys */
+  --color-google-white: #ffffff;
+  --color-google-grey-100: #f3f4f6;
+  --color-google-grey-200: #e5e7eb;
+  --color-google-grey-300: #d1d5db;
+  --color-google-grey-400: #9ca3af;
+  --color-google-grey-500: #6b7280;
+  --color-google-grey-600: #4b5563;
+  --color-google-grey-700: #374151;
+  --color-google-grey-800: #1f2937;
+  --color-google-grey-900: #111827; 
+  --color-google-black: #030712;
+  
+  /* Blue Accent */
+  --color-google-blue-300: #93c5fd;
+  --color-google-blue-400: #60a5fa;
+  --color-google-blue-500: #3b82f6; 
+  --color-google-blue-600: #2563eb;
+  
+  /* Cyan Accent */
+  --color-google-green-300: #67e8f9;
+  --color-google-green-400: #22d3ee;
+  --color-google-green-500: #06b6d4;
+  --color-google-green-600: #0891b2;
+  
+  /* Yellow/Warm Accent */
+  --color-google-yellow-200: #fef08a;
+  --color-google-yellow-400: #facc15;
+  --color-google-yellow-500: #eab308;
+  --color-google-yellow-600: #ca8a04;
+  
+  /* Purple Accent changed to Green */
+  --color-google-red-300: #86efac;
+  --color-google-red-400: #4ade80;
+  --color-google-red-500: #22c55e;
+  --color-google-red-600: #16a34a;
+
+  /* --- New Custom Palette --- */
+  
+  /* Primary Colors */
+  --color-primary-green: #74D724;
+  --color-primary-black: #000000;
+  --color-primary-white: #FFFFFF;
+
+  /* Secondary Colors */
+  --color-secondary-blue: #0066FF;
+  --color-secondary-purple: #8A2BE2;
+  --color-secondary-pink: #FF007A;
+  --color-secondary-dark: #1A1A1A;
+  --color-secondary-grey: #333333;
+
+  /* Compatibility Mapping for old variables */
+  --color-brand-orange: #FF007A;
+  --color-brand-pink: #FF007A;
+  --color-brand-fluorescent: #74D724;
+  --color-brand-cyan: #0066FF;
+  --color-brand-purple: #8A2BE2;
+  
+  --color-neon-purple: #8A2BE2;
+  --color-neon-fuchsia: #FF007A;
+  --color-neon-indigo: #0066FF;
+  --color-neon-blue: #0066FF;
+  --color-neon-cyan: #0066FF;
+
+  --font-sans: "Clash Display", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Relidux", ui-sans-serif, system-ui, sans-serif;
+  --font-valve: "Valve", ui-sans-serif, system-ui, sans-serif;
+
+  --animate-marquee: marquee 25s linear infinite;
+  
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
+body {
+  background-color: #f0fdf4; /* green-50 */
+  color: var(--color-google-grey-700);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, .title-valve {
+  font-family: var(--font-valve);
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+body.dark {
+  background-color: #052e16; /* green-950 */
+  color: var(--color-google-grey-300);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

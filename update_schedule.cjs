@@ -1,0 +1,67 @@
+const fs = require('fs');
+let code = fs.readFileSync('src/components/TechWeek.tsx', 'utf8');
+
+const newSchedule = `const schedule = [
+  {
+    id: "sabado",
+    dayLabel: "Sáb 17",
+    fullDate: "Sábado 17 de Octubre",
+    title: "Startup Summit",
+    color: "bg-google-yellow-600",
+    borderColor: "border-google-yellow-600",
+    textColor: "text-google-yellow-600",
+    events: [
+      { time: "10:00", name: "Inauguración de la feria", desc: "La feria abre al público.", badge: "APERTURA", badgeType: "yellow" },
+      { time: "11:00", name: "Charla de apertura", desc: "\\"Emprender con AI en 2026: el momento es ahora.\\"", badge: "CHARLA", badgeType: "blue" },
+      { time: "12:00", name: "Demos de startups", desc: "Startups locales y regionales muestran su producto en vivo.", badge: "SHOW", badgeType: "green" },
+      { time: "15:00", name: "Keynote · founder invitado", desc: "\\"Construir una empresa sin contactos ni capital.\\"", badge: "CHARLA", badgeType: "blue" },
+      { time: "16:00", name: "Panel", desc: "\\"Emprender fuera de Lima\\" + \\"Producto con AI sin equipo técnico\\".", badge: "PANEL", badgeType: "red" },
+      { time: "17:00", name: "Pitch de ideas", desc: "Estudiantes presentan su idea en 3 minutos.", badge: "CHARLA", badgeType: "blue" },
+      { time: "18:00", name: "Torneo de esports · final", desc: "Los mejores del día, con premios.", badge: "COMPETENCIA", badgeType: "yellow" },
+      { time: "20:00", name: "Música + cierre de noche", desc: "DJ / música en vivo.", badge: "SHOW", badgeType: "green" }
+    ]
+  },
+  {
+    id: "domingo",
+    dayLabel: "Dom 18",
+    fullDate: "Domingo 18 de Octubre",
+    title: "DevFest",
+    color: "bg-google-green-500",
+    borderColor: "border-google-green-500",
+    textColor: "text-google-green-500",
+    events: [
+      { time: "10:00", name: "Tu primer proyecto con AI", desc: "Charla intro, para empezar de cero.", badge: "CHARLA", badgeType: "blue" },
+      { time: "11:00", name: "Desarrollo web desde cero", desc: "De la idea al deploy en un finde.", badge: "CHARLA", badgeType: "blue" },
+      { time: "12:00", name: "Reto AI en 5 min", desc: "En vivo, con contador en pantalla.", badge: "SHOW", badgeType: "green" },
+      { time: "13:00", name: "Cloud para empezar", desc: "Google technologies para el primer proyecto.", badge: "CHARLA", badgeType: "blue" },
+      { time: "15:00", name: "Concurso de proyectos · final", desc: "Estudiantes locales, votación del público.", badge: "COMPETENCIA", badgeType: "yellow" },
+      { time: "16:30", name: "Lightning talks", desc: "Charlas relámpago de devs de la comunidad.", badge: "CHARLA", badgeType: "blue" },
+      { time: "17:00", name: "Premiación + cierre", desc: "Todos los ganadores del fin de semana.", badge: "CEREMONIA", badgeType: "red" }
+    ]
+  },
+  {
+    id: "lunes",
+    dayLabel: "Lun 19",
+    fullDate: "Lunes 19 de Octubre",
+    title: "Health Summit",
+    color: "bg-google-blue-500",
+    borderColor: "border-google-blue-500",
+    textColor: "text-google-blue-500",
+    events: [
+      { time: "09:00", name: "Apertura del summit", desc: "Salud digital en Junín: asistencial y ocupacional.", badge: "CHARLA", badgeType: "blue" },
+      { time: "10:00", name: "Salud asistencial", desc: "Historia clínica y agentes de AI en la atención al paciente.", badge: "CHARLA", badgeType: "blue" },
+      { time: "11:00", name: "Salud ocupacional", desc: "SST, Ley 29783 y EMOs inteligentes.", badge: "CHARLA", badgeType: "blue" },
+      { time: "12:00", name: "Mesa sectorial", desc: "Clínicas, minería y tecnología en salud.", badge: "PANEL", badgeType: "red" },
+      { time: "14:00", name: "Casos + networking", desc: "Cierre profesional del evento.", badge: "NETWORKING", badgeType: "green" },
+      { time: "15:30", name: "Ceremonia de clausura", desc: "Premiación final y cierre de Tech Week 2026.", badge: "CEREMONIA", badgeType: "purple" }
+    ]
+  }
+];`;
+
+code = code.replace(/const schedule = \[[\s\S]*?\];/, newSchedule);
+
+// Also need to fix the grid layout
+// Change sm:grid-cols-5 to sm:grid-cols-3
+code = code.replace(/sm:grid-cols-5/g, 'sm:grid-cols-3');
+
+fs.writeFileSync('src/components/TechWeek.tsx', code);

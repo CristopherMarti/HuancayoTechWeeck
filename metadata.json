@@ -1,0 +1,6 @@
+{
+  "name": "GDG Huancayo Portal",
+  "description": "Portal oficial del Google Developer Groups Huancayo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
