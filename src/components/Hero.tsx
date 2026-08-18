@@ -84,17 +84,36 @@ export function Hero() {
             hidden: { opacity: 0, y: 40 },
             visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
           }}
-          className="flex flex-col items-center text-center tracking-tighter leading-[0.85] max-w-full px-8 py-10 bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-4 transition-transform hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]"
+          className="flex flex-col items-center sm:items-start text-center sm:text-left tracking-tighter leading-[0.85] max-w-full px-8 py-10 bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-4 transition-transform hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]"
         >
-          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4">
-            <span className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-black font-display font-black tracking-tighter">HUANCAYO</span>
-            <div className="flex bg-black text-[#74D724] px-4 py-2 border-2 border-black transform -rotate-2">
-              <span className="text-4xl sm:text-5xl md:text-6xl font-black font-display">2026</span>
+          {/* FILA 1: Huancayo + 20/26 */}
+          <div className="flex items-center sm:items-end gap-3 sm:gap-5 justify-center sm:justify-start">
+            {/* Huancayo (H en Relidux, uancayo en Valve - Negro) */}
+            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-[8.5rem] text-black tracking-tighter leading-none flex items-baseline">
+              <span className="font-display font-normal">H</span>
+              <span className="font-valve font-bold">uancayo</span>
+            </h1>
+
+            {/* 2026 apilado en verde */}
+            <div className="flex flex-col text-[#74D724] leading-[0.75] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-valve font-bold tracking-tight pb-1 sm:pb-2">
+              <span>20</span>
+              <span>26</span>
             </div>
           </div>
-          <div className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl flex gap-4 font-display font-black tracking-tighter text-black mt-4">
-            <span className="bg-[#74D724] px-2 border-4 border-black">TECH</span>
-            <span>WEEK</span>
+
+          {/* FILA 2: Tech Week */}
+          <div className="text-6xl sm:text-7xl md:text-8xl lg:text-[8.5rem] tracking-tighter leading-none flex gap-4 sm:gap-6 mt-2 sm:mt-4">
+            {/* Tech (Negro - T en Relidux, ech en Valve) */}
+            <span className="text-black flex items-baseline">
+              <span className="font-display font-normal">T</span>
+              <span className="font-valve font-bold">ech</span>
+            </span>
+
+            {/* Week (Verde - W en Relidux, eek en Valve) */}
+            <span className="text-[#74D724] flex items-baseline">
+              <span className="font-display font-normal">W</span>
+              <span className="font-valve font-bold">eek</span>
+            </span>
           </div>
         </motion.div>
 

@@ -28,14 +28,34 @@ export function Gallery() {
       <div className="max-w-[1400px] mx-auto px-5 lg:px-10 mb-12 md:mb-16 relative z-10">
         <div className="flex flex-col items-center text-center">
           <div className="inline-flex items-center gap-3 flex-wrap justify-center mb-4">
-            <h2 className="font-display font-black text-6xl md:text-8xl leading-tight text-white uppercase tracking-tighter" style={{ WebkitTextStroke: '2px black' }}>
+            
+            {/* Título Principal con Segoe UI Black y trazo hueco */}
+            <h2 
+              style={{ 
+                fontFamily: "'Segoe UI', system-ui, -apple-system, sans-serif", 
+                fontWeight: 900,
+                WebkitTextStroke: '2px black',
+                color: 'white'
+              }}
+              className="text-6xl md:text-8xl leading-tight uppercase tracking-tighter drop-shadow-md"
+            >
               Galería
             </h2>
-            <span className="inline-flex items-center bg-[#a855f7] text-white font-black text-xs md:text-sm px-4 py-2 uppercase tracking-widest border-[4px] border-black shadow-[4px_4px_0px_0px_#000] mt-2 md:mt-0">
+
+            {/* Badge Momentos en Segoe UI Black */}
+            <span 
+              style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+              className="inline-flex items-center bg-[#a855f7] text-white text-xs md:text-sm px-4 py-2 uppercase tracking-widest border-[4px] border-black shadow-[4px_4px_0px_0px_#000] mt-2 md:mt-0"
+            >
               Momentos
             </span>
           </div>
-          <p className="font-bold text-black text-lg md:text-2xl text-center max-w-2xl bg-white p-4 border-[4px] border-black shadow-[6px_6px_0px_0px_#000]">
+
+          {/* Descripción con Clash Display Regular */}
+          <p 
+            style={{ fontFamily: "'Clash Display', sans-serif", fontWeight: 400 }}
+            className="text-black text-lg md:text-2xl text-center max-w-2xl bg-white p-4 border-[4px] border-black shadow-[6px_6px_0px_0px_#000]"
+          >
             Una mirada en vivo a nuestra comunidad en plena acción.
           </p>
         </div>
@@ -56,7 +76,12 @@ export function Gallery() {
                   <div className={`h-3 w-full border-b-[4px] border-black ${photo.color}`}></div>
                   <img src={photo.url} alt={photo.alt} className="w-full h-[250px] object-cover filter grayscale group-hover:grayscale-0 transition-all duration-300" />
                   <div className="absolute bottom-4 left-4 bg-white border-[3px] border-black px-3 py-1 shadow-[4px_4px_0px_0px_#000]">
-                    <span className="font-black text-xs uppercase tracking-widest text-black">{photo.tag}</span>
+                    <span 
+                      style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+                      className="text-xs uppercase tracking-widest text-black"
+                    >
+                      {photo.tag}
+                    </span>
                   </div>
                 </div>
               ))}
@@ -75,7 +100,12 @@ export function Gallery() {
                   <div className={`h-3 w-full border-b-[4px] border-black ${photo.color}`}></div>
                   <img src={photo.url} alt={photo.alt} className="w-full h-[320px] object-cover filter grayscale group-hover:grayscale-0 transition-all duration-300" />
                   <div className="absolute bottom-4 left-4 bg-white border-[3px] border-black px-3 py-1 shadow-[4px_4px_0px_0px_#000]">
-                    <span className="font-black text-xs uppercase tracking-widest text-black">{photo.tag}</span>
+                    <span 
+                      style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+                      className="text-xs uppercase tracking-widest text-black"
+                    >
+                      {photo.tag}
+                    </span>
                   </div>
                 </div>
               ))}
@@ -94,7 +124,12 @@ export function Gallery() {
                   <div className={`h-3 w-full border-b-[4px] border-black ${photo.color}`}></div>
                   <img src={photo.url} alt={photo.alt} className="w-full h-[220px] object-cover filter grayscale group-hover:grayscale-0 transition-all duration-300" />
                   <div className="absolute bottom-4 left-4 bg-white border-[3px] border-black px-3 py-1 shadow-[4px_4px_0px_0px_#000]">
-                    <span className="font-black text-xs uppercase tracking-widest text-black">{photo.tag}</span>
+                    <span 
+                      style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+                      className="text-xs uppercase tracking-widest text-black"
+                    >
+                      {photo.tag}
+                    </span>
                   </div>
                 </div>
               ))}

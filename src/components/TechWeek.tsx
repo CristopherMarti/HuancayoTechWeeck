@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react';
-import { useState, useEffect, useRef } from 'react';
-import { Clock, ArrowRight } from 'lucide-react';
+import { useState } from 'react';
+import { Clock } from 'lucide-react';
 
 const schedule = [
   {
@@ -83,42 +83,47 @@ const schedule = [
   }
 ];
 
-
-const renderBadge = (badge: string, badgeType: string) => {
+const renderBadge = (badge: string, _badgeType: string) => {
   return (
-    <span className={`inline-flex mt-2 px-3 py-1 text-[10px] font-black tracking-widest uppercase border-2 border-black bg-white text-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]`}>
+    <span 
+      style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+      className="inline-flex mt-2 px-3 py-1 text-[10px] uppercase tracking-widest border-2 border-black bg-white text-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+    >
       {badge}
     </span>
   );
-}
+};
 
 export function TechWeek() {
   const [activeDayIndex, setActiveDayIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-  
-  useEffect(() => {
-    if (isPaused) return;
-    const interval = setInterval(() => {
-      setActiveDayIndex((prev) => (prev + 1) % schedule.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [isPaused]);
 
   const activeDay = schedule[activeDayIndex];
+  
   return (
     <section className="w-full relative py-20 bg-white text-black border-y-[6px] border-black" id="tech-week">
       <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, #aaa 2px, transparent 0)', backgroundSize: '32px 32px' }}></div>
-      <div className="max-w-[1200px] mx-auto px-5 lg:px-10 relative z-10" id="agenda" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
+      <div className="max-w-[1200px] mx-auto px-5 lg:px-10 relative z-10" id="agenda">
+        
+        {/* Cabecera Agenda */}
         <div className="flex flex-col items-center mb-12 md:mb-16">
           <div className="inline-flex items-center gap-4 flex-wrap justify-center mb-4">
-            <h2 className="font-display font-black text-6xl md:text-8xl leading-none text-black uppercase tracking-tighter">
+            <h2 
+              style={{ fontFamily: "'Segoe UI', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
+              className="text-6xl md:text-8xl leading-none text-black uppercase tracking-tight"
+            >
               AGENDA 2026
             </h2>
-            <span className="inline-flex items-center bg-black text-[#74D724] font-black text-xs md:text-sm px-3 py-1 uppercase tracking-widest border-b-4 border-[#74D724]">
+            <span 
+              style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+              className="inline-flex items-center bg-black text-[#74D724] text-xs md:text-sm px-3 py-1 uppercase tracking-widest border-b-4 border-[#74D724]"
+            >
               NUEVO
             </span>
           </div>
-          <p className="font-bold text-black text-lg md:text-xl text-center max-w-2xl px-4">
+          <p 
+            style={{ fontFamily: "'Clash Display', sans-serif", fontWeight: 400 }}
+            className="text-black text-lg md:text-xl text-center max-w-2xl px-4"
+          >
             La semana de tecnología más vibrante. Eventos especializados cada día.
           </p>
         </div>
@@ -130,23 +135,29 @@ export function TechWeek() {
             {schedule.map((day, idx) => {
               const isActive = activeDayIndex === idx;
               return (
-              <div key={day.id} className="min-w-[140px] sm:min-w-0 shrink-0 snap-center flex flex-col gap-2">
-                <div className="text-center font-black text-xs md:text-sm text-black uppercase tracking-widest">
-                  {day.dayLabel}
+                <div key={day.id} className="min-w-[140px] sm:min-w-0 shrink-0 snap-center flex flex-col gap-2">
+                  <div 
+                    style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+                    className="text-center text-xs md:text-sm text-black uppercase tracking-widest"
+                  >
+                    {day.dayLabel}
+                  </div>
+                  <button
+                    onClick={() => setActiveDayIndex(idx)}
+                    className={`w-full relative h-24 md:h-32 transition-all duration-300 ease-out flex flex-col items-center justify-center overflow-hidden
+                    ${isActive 
+                      ? `bg-white border-4 border-black shadow-[6px_6px_0px_0px_#000] z-10` 
+                      : 'bg-black text-white hover:bg-black/90'
+                    }`}
+                  >
+                    <span 
+                      style={{ fontFamily: "'Segoe UI', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
+                      className={`text-sm sm:text-base md:text-xl uppercase tracking-widest relative z-10 ${isActive ? 'text-black' : 'text-white'} text-center px-2 leading-tight whitespace-pre-wrap`}
+                    >
+                      {day.title}
+                    </span>
+                  </button>
                 </div>
-                <button
-                  onClick={() => setActiveDayIndex(idx)}
-                  className={`w-full relative h-24 md:h-32 transition-all duration-300 ease-out flex flex-col items-center justify-center overflow-hidden
-                  ${isActive 
-                    ? `bg-white border-4 border-black shadow-[6px_6px_0px_0px_#000] z-10` 
-                    : 'bg-black text-white hover:bg-black/90'
-                  }`}
-                >
-                  <span className={`font-display font-black text-sm sm:text-base md:text-xl uppercase tracking-widest relative z-10 ${isActive ? 'text-black' : 'text-white'} text-center px-2 leading-tight whitespace-pre-wrap`}>
-                    {day.title}
-                  </span>
-                </button>
-              </div>
               );
             })}
           </div>
@@ -163,8 +174,11 @@ export function TechWeek() {
                 className="w-full flex flex-col"
               >
                 <div className="flex items-center gap-4 mb-10 pb-4">
-                  <div className={`w-5 h-5 md:w-6 md:h-6 border-4 border-black bg-[#74D724]`}></div>
-                  <h3 className={`text-2xl sm:text-3xl md:text-5xl font-black uppercase tracking-tighter break-words leading-tight font-display text-black`}>
+                  <div className="w-5 h-5 md:w-6 md:h-6 border-4 border-black bg-[#74D724]"></div>
+                  <h3 
+                    style={{ fontFamily: "'Segoe UI', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
+                    className="text-2xl sm:text-3xl md:text-5xl uppercase tracking-tight break-words leading-tight text-black"
+                  >
                     {activeDay.fullDate.toUpperCase()} <span className="hidden sm:inline">-</span><br className="sm:hidden" /> {activeDay.title}
                   </h3>
                 </div>
@@ -179,19 +193,30 @@ export function TechWeek() {
                       transition={{ delay: idx * 0.1, duration: 0.5 }}
                       className="relative group"
                     >
-                      <div className={`absolute -left-[38px] md:-left-[54px] top-1.5 w-6 h-6 md:w-8 md:h-8 border-4 border-black bg-white transition-transform duration-300 z-10 group-hover:bg-[#10b981]`}></div>
+                      <div className="absolute -left-[38px] md:-left-[54px] top-1.5 w-6 h-6 md:w-8 md:h-8 border-4 border-black bg-white transition-transform duration-300 z-10 group-hover:bg-[#10b981]"></div>
                       
-                      <div className={`bg-white border-4 border-black p-4 md:p-8 shadow-[8px_8px_0px_0px_#000] hover:shadow-[12px_12px_0px_0px_#000] hover:-translate-y-1 transition-all duration-300 relative`}>
+                      <div className="bg-white border-4 border-black p-4 md:p-8 shadow-[8px_8px_0px_0px_#000] hover:shadow-[12px_12px_0px_0px_#000] hover:-translate-y-1 transition-all duration-300 relative">
                         <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
                           <div className="flex-1 min-w-0">
                             <div className="flex items-center gap-2 mb-3 bg-black text-white inline-flex px-3 py-1">
                               <Clock size={16} className="text-white" />
-                              <span className="font-bold text-sm md:text-base tracking-widest">{event.time}</span>
+                              <span 
+                                style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 700 }}
+                                className="text-sm md:text-base tracking-widest"
+                              >
+                                {event.time}
+                              </span>
                             </div>
-                            <h4 className="text-xl md:text-3xl font-black text-black mb-2 leading-tight break-words uppercase">
+                            <h4 
+                              style={{ fontFamily: "'Segoe UI', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
+                              className="text-xl md:text-3xl text-black mb-2 leading-tight break-words uppercase"
+                            >
                               {event.name}
                             </h4>
-                            <p className="text-black/80 text-base md:text-lg font-bold leading-relaxed">
+                            <p 
+                              style={{ fontFamily: "'Clash Display', sans-serif", fontWeight: 400 }}
+                              className="text-black/80 text-base md:text-lg leading-relaxed"
+                            >
                               {event.desc}
                             </p>
                           </div>

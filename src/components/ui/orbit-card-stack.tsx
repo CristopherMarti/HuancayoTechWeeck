@@ -72,13 +72,11 @@ export function OrbitCardStack({
           const yOffset = Math.abs(distance) * lift + (distance === 0 ? -15 : 0);
           const scale = 1 - Math.abs(distance) * 0.12;
           
-          // More dynamic rotation (adds a slight random messiness based on index)
           const baseRotate = distance * 8;
           const messyRotate = (index % 3 === 0 ? 3 : index % 2 === 0 ? -2 : 1) * Math.abs(distance);
           const rotateZ = distance === 0 ? 0 : baseRotate + messyRotate;
           
           const zIndex = items.length - Math.abs(distance);
-          
           const isActive = index === activeIndex;
 
           return (
@@ -108,7 +106,7 @@ export function OrbitCardStack({
               }}
             >
               <div 
-                className={`w-full bg-white border-[6px] border-black shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] p-6 md:p-8 flex flex-col gap-4 overflow-hidden transition-colors duration-300 relative group`}
+                className="w-full bg-white border-[6px] border-black shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] p-6 md:p-8 flex flex-col gap-4 overflow-hidden transition-colors duration-300 relative group"
                 style={{
                   borderTopColor: item.accent,
                   borderTopWidth: '16px'
@@ -125,29 +123,54 @@ export function OrbitCardStack({
                   </div>
                   <div className="flex flex-col items-end">
                     <span 
-                      className="text-black font-black uppercase text-xs md:text-sm px-4 py-1.5 border-[3px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
-                      style={{ backgroundColor: item.accent }}
+                      style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+                      className="text-black uppercase text-xs md:text-sm px-4 py-1.5 border-[3px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+                      style={{ backgroundColor: item.accent, fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
                     >
                       {item.stat}
                     </span>
-                    <span className="text-black font-bold text-sm md:text-base uppercase mt-2 tracking-widest">{item.initials}</span>
+                    <span 
+                      style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+                      className="text-black text-sm md:text-base uppercase mt-2 tracking-widest"
+                    >
+                      {item.initials}
+                    </span>
                   </div>
                 </div>
 
                 <div className="z-10 relative mt-4">
-                  <h3 className="font-display font-black text-3xl md:text-4xl uppercase tracking-tighter leading-none mb-2 text-black">
+                  {/* Nombre del Speaker */}
+                  <h3 
+                    style={{ fontFamily: "'Segoe UI', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
+                    className="text-3xl md:text-4xl uppercase tracking-tight leading-none mb-2 text-black"
+                  >
                     {item.name}
                   </h3>
-                  <p className="font-bold text-sm md:text-base uppercase tracking-widest text-black/70 mb-5">
+
+                  {/* Rol / Cargo */}
+                  <p 
+                    style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+                    className="text-sm md:text-base uppercase tracking-widest text-black/70 mb-5"
+                  >
                     {item.role}
                   </p>
                   
+                  {/* Caja de Detalles */}
                   <div className="bg-[#f0f0f0] border-[4px] border-black p-4 md:p-5 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                    <p className="font-medium text-sm md:text-base text-black leading-tight">
+                    {/* Descripción con Clash Display Regular */}
+                    <p 
+                      style={{ fontFamily: "'Clash Display', sans-serif", fontWeight: 400 }}
+                      className="text-sm md:text-base text-black leading-tight"
+                    >
                       {item.description}
                     </p>
+
+                    {/* Tema con Segoe UI Black */}
                     {item.topic && (
-                      <p className="font-black text-sm md:text-base text-black mt-3 uppercase border-t-[3px] border-black pt-3">
+                      <p 
+                        style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+                        className="text-sm md:text-base text-black mt-3 uppercase border-t-[3px] border-black pt-3"
+                      >
                         "{item.topic}"
                       </p>
                     )}

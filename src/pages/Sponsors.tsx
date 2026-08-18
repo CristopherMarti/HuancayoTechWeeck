@@ -65,23 +65,32 @@ export function Sponsors() {
           className="inline-flex items-center gap-2 px-4 py-2 border-[4px] border-black bg-[#ffbd2e] shadow-[4px_4px_0px_0px_#000] mb-6"
         >
           <Star className="w-5 h-5 text-black" />
-          <span className="text-black font-black text-sm uppercase tracking-widest">Sponsors</span>
+          <span 
+            style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+            className="text-black text-sm uppercase tracking-widest"
+          >
+            Sponsors
+          </span>
         </motion.div>
         
+        {/* Titular Principal: Impulsando la Innovación en Segoe UI Black */}
         <motion.h1 
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.1 }}
-          className="font-display font-black text-6xl md:text-8xl text-black uppercase tracking-tighter mb-8 leading-none bg-[#ffbd2e] px-6 py-4 border-[6px] border-black shadow-[12px_12px_0px_0px_#000]"
+          style={{ fontFamily: "'Segoe UI', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
+          className="text-6xl md:text-8xl text-black uppercase tracking-tight mb-8 leading-none bg-[#ffbd2e] px-6 py-4 border-[6px] border-black shadow-[12px_12px_0px_0px_#000]"
         >
           Impulsando <br/> la Innovación
         </motion.h1>
         
+        {/* Párrafo descriptivo en Clash Display Regular */}
         <motion.p 
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="text-lg md:text-2xl text-black font-bold max-w-3xl bg-white border-4 border-black p-4 shadow-[6px_6px_0px_0px_#000]"
+          style={{ fontFamily: "'Clash Display', sans-serif", fontWeight: 400 }}
+          className="text-lg md:text-2xl text-black max-w-3xl bg-white border-4 border-black p-4 shadow-[6px_6px_0px_0px_#000]"
         >
           Únete a las marcas líderes mundiales que hacen posible la convención tecnológica más grande del centro del país.
         </motion.p>
@@ -92,10 +101,13 @@ export function Sponsors() {
         <Technologies />
       </div>
 
-      {/* Pricing / Sponsors Brutalist Section */}
+      {/* Pricing / Sponsors Section */}
       <div className="w-full mb-32 relative">
         <div className="text-center mb-12 relative z-10">
-          <h3 className="font-display font-black text-4xl md:text-6xl text-black uppercase tracking-tight mb-4 inline-block bg-[#00bcd4] text-white px-6 py-2 border-[4px] border-black shadow-[8px_8px_0px_0px_#000]">
+          <h3 
+            style={{ fontFamily: "'Segoe UI', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
+            className="text-4xl md:text-6xl uppercase tracking-tight mb-4 inline-block bg-[#00bcd4] text-white px-6 py-2 border-[4px] border-black shadow-[8px_8px_0px_0px_#000]"
+          >
             Opciones de Sponsorship
           </h3>
         </div>
@@ -111,31 +123,48 @@ export function Sponsors() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className={`p-8 flex flex-col relative overflow-hidden transition-all duration-300 border-[6px] border-black shadow-[12px_12px_0px_0px_#000] hover:shadow-[16px_16px_0px_0px_#000] hover:-translate-y-2 bg-white`}
+                className="p-8 flex flex-col relative overflow-hidden transition-all duration-300 border-[6px] border-black shadow-[12px_12px_0px_0px_#000] hover:shadow-[16px_16px_0px_0px_#000] hover:-translate-y-2 bg-white"
               >
                 <div className={`absolute top-0 left-0 w-full h-4 border-b-[6px] border-black ${bgClass}`} />
                 <div className="relative z-10 flex-1 flex flex-col group mt-6">
-                  <h4 className="font-display font-black text-4xl lg:text-5xl text-black tracking-tight mb-4 uppercase">
+                  {/* Nombre del Tier en Segoe UI Black */}
+                  <h4 
+                    style={{ fontFamily: "'Segoe UI', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
+                    className="text-4xl lg:text-5xl text-black tracking-tight mb-4 uppercase"
+                  >
                     {tier.name}
                   </h4>
-                  <p className="text-black font-bold text-base mb-8 min-h-[48px]">
+                  
+                  {/* Descripción del Tier en Clash Display Regular */}
+                  <p 
+                    style={{ fontFamily: "'Clash Display', sans-serif", fontWeight: 400 }}
+                    className="text-black text-base mb-8 min-h-[48px]"
+                  >
                     {tier.description}
                   </p>
 
+                  {/* Perks del Tier en Clash Display Regular */}
                   <ul className="space-y-4 mb-10 flex-1">
                     {tier.perks.map((perk, i) => (
                       <li key={i} className="flex items-start gap-3">
                         <div className={`border-2 border-black p-0.5 mt-0.5 shrink-0 ${bgClass}`}>
                           <Check className="w-4 h-4 text-black" strokeWidth={4} />
                         </div>
-                        <span className="text-black font-bold text-base leading-tight">
+                        <span 
+                          style={{ fontFamily: "'Clash Display', sans-serif", fontWeight: 400 }}
+                          className="text-black text-base leading-tight font-bold"
+                        >
                           {perk}
                         </span>
                       </li>
                     ))}
                   </ul>
 
-                  <button className={`w-full bg-black text-white font-black text-xl uppercase tracking-widest border-[4px] border-black py-4 px-6 transition-all duration-300 hover:bg-white hover:text-black shadow-[4px_4px_0px_0px_#000] hover:shadow-none hover:translate-x-1 hover:translate-y-1`}>
+                  {/* Botón en Segoe UI Black */}
+                  <button 
+                    style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+                    className="w-full bg-black text-white text-xl uppercase tracking-widest border-[4px] border-black py-4 px-6 transition-all duration-300 hover:bg-white hover:text-black shadow-[4px_4px_0px_0px_#000] hover:shadow-none hover:translate-x-1 hover:translate-y-1"
+                  >
                     Contactar
                   </button>
                 </div>
@@ -145,6 +174,7 @@ export function Sponsors() {
         </div>
       </div>
 
+      {/* Banner inferior de Llamado a la Acción */}
       <motion.div 
         initial={{ scale: 0.95, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
@@ -152,15 +182,24 @@ export function Sponsors() {
         className="w-full bg-[#ffbd2e] border-[6px] border-black p-8 md:p-16 flex flex-col md:flex-row items-center justify-between gap-8 shadow-[16px_16px_0px_0px_#000] overflow-hidden relative z-20"
       >
         <div className="relative z-10 md:w-2/3">
-          <h2 className="font-display font-black text-4xl md:text-6xl text-black uppercase tracking-tight mb-4">
+          <h2 
+            style={{ fontFamily: "'Segoe UI', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
+            className="text-4xl md:text-6xl text-black uppercase tracking-tight mb-4"
+          >
             ¿Quieres ser parte de esto?
           </h2>
-          <p className="text-black font-bold text-lg md:text-2xl max-w-xl bg-white p-4 border-[4px] border-black">
+          <p 
+            style={{ fontFamily: "'Clash Display', sans-serif", fontWeight: 400 }}
+            className="text-black text-lg md:text-2xl max-w-xl bg-white p-4 border-[4px] border-black"
+          >
             Posiciona tu marca frente a más de 1,000 profesionales tech, inversores y talento emergente.
           </p>
         </div>
         <div className="relative z-10 md:w-1/3 flex justify-end w-full">
-          <button className="w-full md:w-auto bg-white text-black border-[4px] border-black hover:bg-black hover:text-white font-black text-xl md:text-2xl py-4 px-8 flex items-center justify-center gap-3 transition-all shadow-[6px_6px_0px_0px_#000] hover:shadow-none hover:translate-x-1 hover:translate-y-1 group uppercase tracking-widest">
+          <button 
+            style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+            className="w-full md:w-auto bg-white text-black border-[4px] border-black hover:bg-black hover:text-white text-xl md:text-2xl py-4 px-8 flex items-center justify-center gap-3 transition-all shadow-[6px_6px_0px_0px_#000] hover:shadow-none hover:translate-x-1 hover:translate-y-1 group uppercase tracking-widest"
+          >
             Contactar equipo
             <ArrowRight className="w-6 h-6" />
           </button>

@@ -107,9 +107,11 @@
   --color-neon-blue: #0066FF;
   --color-neon-cyan: #0066FF;
 
-  --font-sans: "Clash Display", ui-sans-serif, system-ui, sans-serif;
+  --font-segoe: "Segoe UI", system-ui, -apple-system, sans-serif;
   --font-display: "Relidux", ui-sans-serif, system-ui, sans-serif;
   --font-valve: "Valve", ui-sans-serif, system-ui, sans-serif;
+  --font-clash: "Clash Display", ui-sans-serif, system-ui, sans-serif;
+  
 
   --animate-marquee: marquee 25s linear infinite;
   
@@ -138,6 +140,12 @@ h2, h3, h4, h5, h6 {
 body.dark {
   background-color: #052e16; /* green-950 */
   color: var(--color-google-grey-300);
+}
+
+
+body, p {
+  font-family: 'Clash Display', sans-serif;
+  font-weight: 400; /* Regular */
 }
 
 .hide-scrollbar::-webkit-scrollbar {

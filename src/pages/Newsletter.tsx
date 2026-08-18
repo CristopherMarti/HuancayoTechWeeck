@@ -40,14 +40,36 @@ export function Newsletter() {
             <Mail className="w-8 h-8 text-black" strokeWidth={3} />
           </motion.div>
           
-          <h1 className="font-display font-black text-6xl md:text-8xl text-white uppercase tracking-tighter mb-4 leading-none" style={{ WebkitTextStroke: '2px black' }}>
-            Tech News <br/> <span className="text-[#a855f7]" style={{ WebkitTextStroke: '2px black' }}>en tu inbox</span>
+          {/* Titular Principal en Segoe UI Black con estilo Neo-Brutalista hueco */}
+          <h1 
+            style={{ 
+              fontFamily: "'Segoe UI', system-ui, -apple-system, sans-serif", 
+              fontWeight: 900,
+              WebkitTextStroke: '2px black',
+              color: 'white'
+            }}
+            className="text-6xl md:text-8xl uppercase tracking-tighter mb-4 leading-none drop-shadow-md"
+          >
+            Tech News <br/> 
+            <span 
+              style={{ 
+                color: '#a855f7',
+                WebkitTextStroke: '2px black' 
+              }}
+            >
+              en tu inbox
+            </span>
           </h1>
           
-          <p className="text-lg md:text-xl text-black font-bold mb-10 max-w-lg leading-relaxed bg-white p-4 border-[4px] border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+          {/* Párrafo descriptivo en Clash Display Regular */}
+          <p 
+            style={{ fontFamily: "'Clash Display', sans-serif", fontWeight: 400 }}
+            className="text-lg md:text-xl text-black mb-10 max-w-lg leading-relaxed bg-white p-4 border-[4px] border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]"
+          >
             Únete a nuestra lista de correo para recibir las últimas actualizaciones de desarrollo, inteligencia artificial y todo sobre Tech Week Huancayo 2026.
           </p>
 
+          {/* Lista de beneficios en Segoe UI Black */}
           <div className="flex flex-col gap-4 mb-8 w-full">
             {benefits.map((benefit, idx) => (
               <motion.div 
@@ -58,7 +80,12 @@ export function Newsletter() {
                 className="flex items-center gap-3 bg-[#f0f0f0] p-3 border-[3px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
               >
                 <CheckSquare className="w-6 h-6 text-[#74D724] flex-shrink-0" strokeWidth={3} />
-                <span className="text-black font-black uppercase tracking-tight">{benefit}</span>
+                <span 
+                  style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+                  className="text-black uppercase tracking-tight text-sm md:text-base"
+                >
+                  {benefit}
+                </span>
               </motion.div>
             ))}
           </div>
@@ -117,9 +144,12 @@ export function Newsletter() {
                       required
                     />
                   </div>
+                  
+                  {/* Botón en Segoe UI Black */}
                   <button 
                     type="submit"
-                    className="relative overflow-hidden bg-[#a855f7] border-[4px] border-white text-white font-black py-4 px-6 transition-all hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_#fff] shadow-[4px_4px_0px_0px_#fff] flex items-center justify-center gap-2 group tracking-widest uppercase text-base md:text-lg"
+                    style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+                    className="relative overflow-hidden bg-[#a855f7] border-[4px] border-white text-white py-4 px-6 transition-all hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_#fff] shadow-[4px_4px_0px_0px_#fff] flex items-center justify-center gap-2 group tracking-widest uppercase text-base md:text-lg"
                   >
                     <span className="relative z-10 flex items-center gap-2">
                       ¡Suscribirme Ahora!
@@ -140,4 +170,3 @@ export function Newsletter() {
     </motion.div>
   );
 }
-

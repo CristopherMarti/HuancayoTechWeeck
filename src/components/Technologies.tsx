@@ -34,7 +34,7 @@ const BrandIcons = {
       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
     </svg>
   )
-}
+};
 
 export function Technologies() {
   return (
@@ -42,14 +42,34 @@ export function Technologies() {
       <div className="max-w-[1400px] mx-auto px-5 lg:px-10">
         <div className="flex flex-col items-center mb-12 md:mb-16">
           <div className="inline-flex items-center gap-3 flex-wrap justify-center mb-4">
-            <h2 className="font-display font-black text-6xl md:text-8xl leading-tight text-white uppercase tracking-tighter" style={{ WebkitTextStroke: '2px black' }}>
+            
+            {/* Título: Segoe UI Black con trazo hueco */}
+            <h2 
+              style={{ 
+                fontFamily: "'Segoe UI', system-ui, -apple-system, sans-serif", 
+                fontWeight: 900,
+                WebkitTextStroke: '2px black',
+                color: 'white'
+              }} 
+              className="text-6xl md:text-8xl leading-tight uppercase tracking-tighter drop-shadow-md"
+            >
               Partners
             </h2>
-            <span className="inline-flex items-center bg-[#a855f7] text-black font-black text-xs md:text-sm px-4 py-2 uppercase tracking-widest border-[4px] border-black shadow-[4px_4px_0px_0px_#000] mt-2 md:mt-0">
+
+            {/* Badge Top */}
+            <span 
+              style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+              className="inline-flex items-center bg-[#a855f7] text-black text-xs md:text-sm px-4 py-2 uppercase tracking-widest border-[4px] border-black shadow-[4px_4px_0px_0px_#000] mt-2 md:mt-0"
+            >
               Top
             </span>
           </div>
-          <p className="font-bold text-black text-lg md:text-2xl text-center max-w-2xl bg-white p-4 border-[4px] border-black shadow-[6px_6px_0px_0px_#000]">
+
+          {/* Descripción: Clash Display Regular */}
+          <p 
+            style={{ fontFamily: "'Clash Display', sans-serif", fontWeight: 400 }}
+            className="text-black text-lg md:text-2xl text-center max-w-2xl bg-white p-4 border-[4px] border-black shadow-[6px_6px_0px_0px_#000]"
+          >
             Con el respaldo de las mejores tecnologías e instituciones.
           </p>
         </div>
@@ -98,7 +118,12 @@ function TechCard({ tech }: { tech: Technology }) {
         <div className={`transition-all duration-300 ${isHovered ? 'text-black scale-110' : 'text-black'}`}>
           {BrandIcons[tech.name as keyof typeof BrandIcons] || BrandIcons['Web Tech']}
         </div>
-        <span className={`font-black uppercase tracking-widest text-xs md:text-sm text-center transition-all duration-300 ${isHovered ? 'text-black' : 'text-black'}`}>
+        
+        {/* Nombres de tarjetas en Segoe UI Black */}
+        <span 
+          style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+          className={`uppercase tracking-widest text-xs md:text-sm text-center transition-all duration-300 ${isHovered ? 'text-black' : 'text-black'}`}
+        >
           {tech.name}
         </span>
       </div>
