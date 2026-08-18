@@ -58,7 +58,7 @@ export function Technologies() {
 
             {/* Badge Top */}
             <span 
-              style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+              style={{ fontFamily: "'Segoe UI', 'Space Grotesk', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
               className="inline-flex items-center bg-[#a855f7] text-black text-xs md:text-sm px-4 py-2 uppercase tracking-widest border-[4px] border-black shadow-[4px_4px_0px_0px_#000] mt-2 md:mt-0"
             >
               Top
@@ -121,7 +121,7 @@ function TechCard({ tech }: { tech: Technology }) {
         
         {/* Nombres de tarjetas en Segoe UI Black */}
         <span 
-          style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+          style={{ fontFamily: "'Segoe UI', 'Space Grotesk', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
           className={`uppercase tracking-widest text-xs md:text-sm text-center transition-all duration-300 ${isHovered ? 'text-black' : 'text-black'}`}
         >
           {tech.name}

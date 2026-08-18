@@ -86,7 +86,7 @@ const schedule = [
 const renderBadge = (badge: string, _badgeType: string) => {
   return (
     <span 
-      style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+      style={{ fontFamily: "'Segoe UI', 'Space Grotesk', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
       className="inline-flex mt-2 px-3 py-1 text-[10px] uppercase tracking-widest border-2 border-black bg-white text-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
     >
       {badge}
@@ -114,7 +114,7 @@ export function TechWeek() {
               AGENDA 2026
             </h2>
             <span 
-              style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+              style={{ fontFamily: "'Segoe UI', 'Space Grotesk', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
               className="inline-flex items-center bg-black text-[#74D724] text-xs md:text-sm px-3 py-1 uppercase tracking-widest border-b-4 border-[#74D724]"
             >
               NUEVO
@@ -137,7 +137,7 @@ export function TechWeek() {
               return (
                 <div key={day.id} className="min-w-[140px] sm:min-w-0 shrink-0 snap-center flex flex-col gap-2">
                   <div 
-                    style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+                    style={{ fontFamily: "'Segoe UI', 'Space Grotesk', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
                     className="text-center text-xs md:text-sm text-black uppercase tracking-widest"
                   >
                     {day.dayLabel}

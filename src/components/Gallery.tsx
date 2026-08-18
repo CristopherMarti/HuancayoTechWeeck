@@ -44,7 +44,7 @@ export function Gallery() {
 
             {/* Badge Momentos en Segoe UI Black */}
             <span 
-              style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+              style={{ fontFamily: "'Segoe UI', 'Space Grotesk', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
               className="inline-flex items-center bg-[#a855f7] text-white text-xs md:text-sm px-4 py-2 uppercase tracking-widest border-[4px] border-black shadow-[4px_4px_0px_0px_#000] mt-2 md:mt-0"
             >
               Momentos
@@ -77,7 +77,7 @@ export function Gallery() {
                   <img src={photo.url} alt={photo.alt} className="w-full h-[250px] object-cover filter grayscale group-hover:grayscale-0 transition-all duration-300" />
                   <div className="absolute bottom-4 left-4 bg-white border-[3px] border-black px-3 py-1 shadow-[4px_4px_0px_0px_#000]">
                     <span 
-                      style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+                      style={{ fontFamily: "'Segoe UI', 'Space Grotesk', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
                       className="text-xs uppercase tracking-widest text-black"
                     >
                       {photo.tag}
@@ -101,7 +101,7 @@ export function Gallery() {
                   <img src={photo.url} alt={photo.alt} className="w-full h-[320px] object-cover filter grayscale group-hover:grayscale-0 transition-all duration-300" />
                   <div className="absolute bottom-4 left-4 bg-white border-[3px] border-black px-3 py-1 shadow-[4px_4px_0px_0px_#000]">
                     <span 
-                      style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+                      style={{ fontFamily: "'Segoe UI', 'Space Grotesk', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
                       className="text-xs uppercase tracking-widest text-black"
                     >
                       {photo.tag}
@@ -125,7 +125,7 @@ export function Gallery() {
                   <img src={photo.url} alt={photo.alt} className="w-full h-[220px] object-cover filter grayscale group-hover:grayscale-0 transition-all duration-300" />
                   <div className="absolute bottom-4 left-4 bg-white border-[3px] border-black px-3 py-1 shadow-[4px_4px_0px_0px_#000]">
                     <span 
-                      style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+                      style={{ fontFamily: "'Segoe UI', 'Space Grotesk', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
                       className="text-xs uppercase tracking-widest text-black"
                     >
                       {photo.tag}

@@ -22,7 +22,7 @@ export function Navbar() {
           <div className="flex-shrink-0">
             <Link to="/" className="inline-flex items-center gap-2 group">
               <div 
-                style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+                style={{ fontFamily: "'Segoe UI', 'Space Grotesk', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
                 className="w-12 h-10 bg-black text-white flex items-center justify-center text-xl border-[3px] border-transparent group-hover:bg-[#ff5f56] group-hover:text-black group-hover:border-black transition-colors shadow-[4px_4px_0px_0px_#000]"
               >
                 TW

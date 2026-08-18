@@ -13,7 +13,7 @@ export function About() {
       {/* Giant Background Text */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex justify-center pointer-events-none opacity-5">
         <h2 
-          style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+          style={{ fontFamily: "'Segoe UI', 'Space Grotesk', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
           className="text-[120px] md:text-[200px] lg:text-[280px] text-black uppercase tracking-tighter whitespace-nowrap leading-none"
         >
           TECHWEEK

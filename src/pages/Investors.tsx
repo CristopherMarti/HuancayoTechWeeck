@@ -43,7 +43,7 @@ export function Investors() {
           >
             <TrendingUp className="w-5 h-5 text-black" />
             <span 
-              style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+              style={{ fontFamily: "'Segoe UI', 'Space Grotesk', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
               className="text-black text-sm uppercase tracking-widest"
             >
               Inversores
@@ -180,7 +180,7 @@ export function Investors() {
 
           {/* Botón en Segoe UI Black */}
           <button 
-            style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+            style={{ fontFamily: "'Segoe UI', 'Space Grotesk', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
             className="bg-white text-black border-[4px] border-black text-xl md:text-2xl py-5 px-10 flex items-center justify-center gap-3 transition-all shadow-[8px_8px_0px_0px_#000] hover:shadow-none hover:translate-x-1 hover:translate-y-1 hover:bg-black hover:text-white uppercase tracking-widest w-full sm:w-auto group"
           >
             Solicitar Pase

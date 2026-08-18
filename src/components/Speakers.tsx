@@ -107,7 +107,7 @@ export function Speakers() {
             </h2>
 
             <span 
-              style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+              style={{ fontFamily: "'Segoe UI', 'Space Grotesk', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
               className="inline-flex items-center bg-[#4285f4] text-black text-xs md:text-sm px-4 py-2 uppercase tracking-widest border-[4px] border-black shadow-[4px_4px_0px_0px_#000] mt-2 md:mt-0"
             >
               Tech
@@ -127,7 +127,7 @@ export function Speakers() {
           <div className="w-full lg:w-1/3 flex flex-col items-center lg:items-start text-center lg:text-left">
             <div className="bg-white border-[6px] border-black p-6 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] w-full relative z-10 transition-colors duration-500" style={{ borderBottomColor: activeMember.accent, borderBottomWidth: '12px' }}>
               <p 
-                style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+                style={{ fontFamily: "'Segoe UI', 'Space Grotesk', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
                 className="text-sm uppercase tracking-widest text-black/70 mb-2 border-b-4 border-black pb-2"
               >
                 Viendo a
@@ -147,7 +147,7 @@ export function Speakers() {
               </h2>
 
               <p 
-                style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+                style={{ fontFamily: "'Segoe UI', 'Space Grotesk', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
                 className="text-lg text-black uppercase mb-4"
               >
                 {activeMember.role}
@@ -155,13 +155,13 @@ export function Speakers() {
 
               <div className="mt-4 bg-black text-white p-4 font-bold border-l-[8px]" style={{ borderColor: activeMember.accent }}>
                 <p 
-                  style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+                  style={{ fontFamily: "'Segoe UI', 'Space Grotesk', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
                   className="text-xs text-white/70 mb-1"
                 >
                   TEMA PRINCIPAL
                 </p>
                 <p 
-                  style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+                  style={{ fontFamily: "'Segoe UI', 'Space Grotesk', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
                   className="text-xl uppercase"
                 >
                   {activeMember.topic}

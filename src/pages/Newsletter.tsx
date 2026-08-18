@@ -81,7 +81,7 @@ export function Newsletter() {
               >
                 <CheckSquare className="w-6 h-6 text-[#74D724] flex-shrink-0" strokeWidth={3} />
                 <span 
-                  style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+                  style={{ fontFamily: "'Segoe UI', 'Space Grotesk', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
                   className="text-black uppercase tracking-tight text-sm md:text-base"
                 >
                   {benefit}
@@ -148,7 +148,7 @@ export function Newsletter() {
                   {/* Botón en Segoe UI Black */}
                   <button 
                     type="submit"
-                    style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+                    style={{ fontFamily: "'Segoe UI', 'Space Grotesk', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
                     className="relative overflow-hidden bg-[#a855f7] border-[4px] border-white text-white py-4 px-6 transition-all hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_#fff] shadow-[4px_4px_0px_0px_#fff] flex items-center justify-center gap-2 group tracking-widest uppercase text-base md:text-lg"
                   >
                     <span className="relative z-10 flex items-center gap-2">

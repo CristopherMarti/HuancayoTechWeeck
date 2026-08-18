@@ -66,7 +66,7 @@ export function Sponsors() {
         >
           <Star className="w-5 h-5 text-black" />
           <span 
-            style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+            style={{ fontFamily: "'Segoe UI', 'Space Grotesk', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
             className="text-black text-sm uppercase tracking-widest"
           >
             Sponsors
@@ -162,7 +162,7 @@ export function Sponsors() {
 
                   {/* Botón en Segoe UI Black */}
                   <button 
-                    style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+                    style={{ fontFamily: "'Segoe UI', 'Space Grotesk', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
                     className="w-full bg-black text-white text-xl uppercase tracking-widest border-[4px] border-black py-4 px-6 transition-all duration-300 hover:bg-white hover:text-black shadow-[4px_4px_0px_0px_#000] hover:shadow-none hover:translate-x-1 hover:translate-y-1"
                   >
                     Contactar
@@ -197,7 +197,7 @@ export function Sponsors() {
         </div>
         <div className="relative z-10 md:w-1/3 flex justify-end w-full">
           <button 
-            style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+            style={{ fontFamily: "'Segoe UI', 'Space Grotesk', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
             className="w-full md:w-auto bg-white text-black border-[4px] border-black hover:bg-black hover:text-white text-xl md:text-2xl py-4 px-8 flex items-center justify-center gap-3 transition-all shadow-[6px_6px_0px_0px_#000] hover:shadow-none hover:translate-x-1 hover:translate-y-1 group uppercase tracking-widest"
           >
             Contactar equipo

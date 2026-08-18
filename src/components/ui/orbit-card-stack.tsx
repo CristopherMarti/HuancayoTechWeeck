@@ -133,7 +133,7 @@ export function OrbitCardStack({
                       {item.stat}
                     </span>
                     <span 
-                      style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+                      style={{ fontFamily: "'Segoe UI', 'Space Grotesk', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
                       className="text-black text-sm md:text-base uppercase mt-2 tracking-widest"
                     >
                       {item.initials}
@@ -152,7 +152,7 @@ export function OrbitCardStack({
 
                   {/* Rol / Cargo */}
                   <p 
-                    style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+                    style={{ fontFamily: "'Segoe UI', 'Space Grotesk', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
                     className="text-sm md:text-base uppercase tracking-widest text-black/70 mb-5"
                   >
                     {item.role}
@@ -171,7 +171,7 @@ export function OrbitCardStack({
                     {/* Tema con Segoe UI Black */}
                     {item.topic && (
                       <p 
-                        style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+                        style={{ fontFamily: "'Segoe UI', 'Space Grotesk', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
                         className="text-sm md:text-base text-black mt-3 uppercase border-t-[3px] border-black pt-3"
                       >
                         "{item.topic}"
