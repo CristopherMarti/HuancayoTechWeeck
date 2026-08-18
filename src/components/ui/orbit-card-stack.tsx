@@ -123,9 +123,12 @@ export function OrbitCardStack({
                   </div>
                   <div className="flex flex-col items-end">
                     <span 
-                      style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+                      style={{ 
+                        backgroundColor: item.accent, 
+                        fontFamily: "'Segoe UI', system-ui, sans-serif", 
+                        fontWeight: 900 
+                      }}
                       className="text-black uppercase text-xs md:text-sm px-4 py-1.5 border-[3px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
-                      style={{ backgroundColor: item.accent, fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
                     >
                       {item.stat}
                     </span>

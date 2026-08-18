@@ -82,16 +82,22 @@ export function Investors() {
         >
           {stats.map((st, i) => (
             <div key={i} className="flex flex-col bg-white border-[4px] border-black p-4 shadow-[6px_6px_0px_0px_#000]">
+              {/* Valor numérico ($2M+, 30+, etc.) */}
               <span 
                 style={{ fontFamily: "'Segoe UI', system-ui, -apple-system, sans-serif", fontWeight: 900 }}
                 className="text-4xl md:text-6xl text-black tracking-tight leading-none"
               >
                 {st.val}
               </span>
+
+              {/* Etiqueta descriptiva (Inversión proyectada, etc.) */}
               <span 
-                style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
-                className="text-sm text-[#00bcd4] uppercase tracking-widest mt-1" 
-                style={{ WebkitTextStroke: '0.5px black', fontFamily: "'Segoe UI', system-ui, sans-serif", fontWeight: 900 }}
+                style={{ 
+                  WebkitTextStroke: '0.5px black', 
+                  fontFamily: "'Segoe UI', system-ui, sans-serif", 
+                  fontWeight: 900 
+                }}
+                className="text-sm text-[#00bcd4] uppercase tracking-widest mt-1"
               >
                 {st.label}
               </span>

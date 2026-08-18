@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* 1. FUENTES LOCALES */
 @font-face {
   font-family: 'Valve';
-  src: url('./assets/fonts/valve.otf') format('opentype');
+  src: url('./assets/fonts/valve bd.otf') format('opentype'),
+       url('./assets/fonts/valve.otf') format('opentype');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -24,7 +26,7 @@
   src: url('./assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Variable.woff2') format('woff2'),
        url('./assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Variable.woff') format('woff'),
        url('./assets/fonts/ClashDisplay_Complete/Fonts/TTF/ClashDisplay-Variable.ttf') format('truetype');
-  font-weight: 200 700;
+  font-weight: 200 900;
   font-style: normal;
   font-display: swap;
 }
@@ -74,14 +76,12 @@
   --color-google-yellow-500: #eab308;
   --color-google-yellow-600: #ca8a04;
   
-  /* Purple Accent changed to Green */
+  /* Green Accent */
   --color-google-red-300: #86efac;
   --color-google-red-400: #4ade80;
   --color-google-red-500: #22c55e;
   --color-google-red-600: #16a34a;
 
-  /* --- New Custom Palette --- */
-  
   /* Primary Colors */
   --color-primary-green: #74D724;
   --color-primary-black: #000000;
@@ -94,7 +94,7 @@
   --color-secondary-dark: #1A1A1A;
   --color-secondary-grey: #333333;
 
-  /* Compatibility Mapping for old variables */
+  /* Compatibility Mapping */
   --color-brand-orange: #FF007A;
   --color-brand-pink: #FF007A;
   --color-brand-fluorescent: #74D724;
@@ -107,11 +107,11 @@
   --color-neon-blue: #0066FF;
   --color-neon-cyan: #0066FF;
 
-  --font-segoe: "Segoe UI", system-ui, -apple-system, sans-serif;
+  /* Fallback multiplataforma para que en móviles y Mac cargue con fuerza idéntica a Segoe UI Black */
+  --font-segoe: "Segoe UI", -apple-system, BlinkMacSystemFont, "Space Grotesk", Roboto, sans-serif;
   --font-display: "Relidux", ui-sans-serif, system-ui, sans-serif;
   --font-valve: "Valve", ui-sans-serif, system-ui, sans-serif;
   --font-clash: "Clash Display", ui-sans-serif, system-ui, sans-serif;
-  
 
   --animate-marquee: marquee 25s linear infinite;
   
@@ -121,31 +121,19 @@
   }
 }
 
+/* 2. REGLAS BASE */
 body {
-  background-color: #f0fdf4; /* green-50 */
-  color: var(--color-google-grey-700);
-  font-family: var(--font-sans);
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'Clash Display', sans-serif;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, .title-valve {
-  font-family: var(--font-valve);
-}
-
-h2, h3, h4, h5, h6 {
-  font-family: var(--font-display);
-}
-
 body.dark {
-  background-color: #052e16; /* green-950 */
+  background-color: #052e16;
   color: var(--color-google-grey-300);
-}
-
-
-body, p {
-  font-family: 'Clash Display', sans-serif;
-  font-weight: 400; /* Regular */
 }
 
 .hide-scrollbar::-webkit-scrollbar {
